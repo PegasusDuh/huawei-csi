@@ -5,7 +5,8 @@ RUN yum install -y \
  xfsprogs \
  nfs-utils \
  net-tools \
- e2fsprogs
+ e2fsprogs \
+ nvme-cli
 ADD ["huawei-csi", "/"]
 RUN ["chmod", "+x", "/huawei-csi"]
 ENTRYPOINT ["/huawei-csi"]
